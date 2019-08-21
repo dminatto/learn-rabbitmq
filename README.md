@@ -42,15 +42,20 @@ Bindings: A binding is a relationship between an exchange and a queue. This can 
 >`php receive_logs.php > logs_from_rabbit.log`
 >
 
+
 ##
 
 #### Test Source 
  
-#####Exemple 01:
+####Tutorial one:
 
-**Goal**: Create a basic producer that sends a single message, and a consumer that receives messages and prints them out. 
+**Goal**: Create a basic producer that sends a single message, and a consumer that receives messages and prints them out.
 
-#####Exemple 02:
+`php send.php`
+ 
+`php receive.php` 
+
+####Tutorial two:
 
 **Goal**: Create a Work Queue that will be used to distribute time-consuming tasks among multiple workers.
 
@@ -58,12 +63,44 @@ The main idea behind Work Queues is to avoid doing a resource-intensive task imm
 
 This concept is especially useful in web applications where it's impossible to handle a complex task during a short HTTP request window.
 
-#####Exemple 03:
+`php new_task.php "A very hard task which takes two seconds.."`
 
-**Goal:** Implements the "publish/subscribe" pattern built a simple logging system
+`php worker.php`
+
+####Tutorial three:
+
+**Goal:** Implements the "publish/subscribe" pattern built a simple log system
+
+`php receive_logs.php`
+
+`php emit_log.php "info: This is the log message"`
+
+
+####Tutorial four: 
+
+**Goal:** Direct some messages to log file 
+
+>specify the type of message that will be saved in log (just warning and error)
+>
+>`php receive_logs_direct.php warning error > logs_from_rabbit.log`
+>
+>specify the typo of recive 
+>
+>`php receive_logs_direct.php info warning error`
+>
+>specify the type of emit
+>
+>`php emit_log_direct.php error "Run. Run. Or it will explode."`
+>
+>
+
+####Tutorial five: 
+
+####Tutorial six: 
+
 
 ##
 
-###### Links 
+###### Useful Links 
 
 [Documentation RabbitMq](https://www.rabbitmq.com/documentation.html)
