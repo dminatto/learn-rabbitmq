@@ -1,5 +1,4 @@
-
-###Important to remember
+# Important to remember
 
 - A producer is a user application that sends messages.
 
@@ -23,7 +22,7 @@ Fanout: A fanout exchange routes messages to all of the queues that are bound to
 Topic: The topic exchange does a wildcard match between the routing key and the routing pattern specified in the binding.
 Headers: Headers exchanges use the message header attributes for routing.
 
-###CONCEPTS
+### CONCEPTS
 
 - **Producer:** Application that sends the messages.
 
@@ -52,7 +51,7 @@ Headers: Headers exchanges use the message header attributes for routing.
 
 
 
-##Access and Permissions
+## Access and Permissions
 
 - None
 
@@ -115,7 +114,7 @@ Close other users's connections
 
 #### Test Source 
  
-####Tutorial one:
+#### Tutorial one:
 
 **Goal**: Create a basic producer that sends a single message, and a consumer that receives messages and prints them out.
 
@@ -123,7 +122,7 @@ Close other users's connections
  
 `php receive.php` 
 
-####Tutorial two:
+#### Tutorial two:
 
 **Goal**: Create a Work Queue that will be used to distribute time-consuming tasks among multiple workers.
 
@@ -135,7 +134,7 @@ This concept is especially useful in web applications where it's impossible to h
 
 `php worker.php`
 
-####Tutorial three:
+#### Tutorial three:
 
 **Goal:** Implements the "publish/subscribe" pattern built a simple log system
 
@@ -144,7 +143,7 @@ This concept is especially useful in web applications where it's impossible to h
 `php emit_log.php "info: This is the log message"`
 
 
-####Tutorial four: 
+#### Tutorial four: 
 
 **Goal:** Direct some messages to log file 
 
@@ -162,12 +161,9 @@ This concept is especially useful in web applications where it's impossible to h
 >
 >
 
-####Tutorial five: 
+#### Tutorial five: 
 
-####Tutorial six: 
-
-
-##
+#### Tutorial six: 
 
 ###### Useful Links 
 
